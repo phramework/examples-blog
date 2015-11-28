@@ -21,8 +21,8 @@
 
     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
         <div class="list-group">
-            <a href="?controller=blog" class="list-group-item">Home</a>
-            <a href="?controller=editor" class="list-group-item">Editor</a>
+            <a href="<?php echo $base; ?>blog/" class="list-group-item">Home</a>
+            <a href="<?php echo $base; ?>editor/" class="list-group-item">Editor</a>
         </div>
     </div><!--/.sidebar-offcanvas-->
 </div><!--/row-->

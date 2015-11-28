@@ -1,12 +1,10 @@
   <hr>
 
   <footer>
-    <p>&copy; Phramework 2015</p>
+    <p>&copy; phramework 2015</p>
   </footer>
 
 </div><!--/.container-->
-
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

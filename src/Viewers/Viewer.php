@@ -1,6 +1,6 @@
 <?php
 
-namespace Phramework\Examples\blog\APP\Viewers;
+namespace Phramework\Examples\Blog\Viewers;
 
 /**
  * @author Xenofon Spafaridis <nohponex@gmail.com>
@@ -25,8 +25,6 @@ class Viewer implements \Phramework\Viewers\IViewer
             $VIEWER_title = func_get_arg(2);
         }
 
-        extract($parameters);
-
         if (!isset($VIEWER_page) || !$VIEWER_page) { //In case page parameter is not set
             $VIEWER_page = 'error';
         }
@@ -37,6 +35,12 @@ class Viewer implements \Phramework\Viewers\IViewer
         } elseif (!isset($VIEWER_title)) {
             $VIEWER_title = '';
         }
+
+        $parameters['base'] = \Phramework\Phramework::getSetting('base');
+        $parameters['VIEWER_title'] = $VIEWER_title;
+        $parameters['VIEWER_page']  = $VIEWER_page;
+        
+        extract($parameters);
 
         include __DIR__. '/header.php';
 

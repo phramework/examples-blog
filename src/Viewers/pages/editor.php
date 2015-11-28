@@ -1,4 +1,4 @@
-<form class="form" method="post" action="<?php echo isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : ''; ?>">
+<form class="form" method="post" action="<?php echo $base; ?>editor">
     <fieldset>
         <legend>Create new post</legend>
         <div class="form-group">

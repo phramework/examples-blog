@@ -4,17 +4,16 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 //This autoload path is for loading current version of phramework
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-define('NS', '\\Phramework\\Examples\\blog\\APP\\Controllers\\');
+define('NS', '\\Phramework\\Examples\\Blog\\Controllers\\');
 
 use \Phramework\Phramework;
 
 /**
- * @package examples/post
  * Define APP as function
  */
-$APP = function() {
+$APP = function () {
 
     //Include settings
     $settings = include __DIR__ . '/../settings.php';
@@ -34,7 +33,7 @@ $APP = function() {
     unset($settings);
 
     Phramework::setViewer(
-        \Phramework\Examples\blog\APP\Viewers\Viewer::class
+        \Phramework\Examples\Blog\Viewers\Viewer::class
     );
 
     //Execute API

@@ -46,8 +46,8 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li <?php if($VIEWER_page == 'blog' ){ echo 'class="active"'; }?>><a href="?controller=blog">Home</a></li>
-          <li <?php if($VIEWER_page == 'editor' ){ echo 'class="active"'; }?>><a href="?controller=editor">Editor</a></li>
+          <li <?php if($VIEWER_page == 'blog' ){ echo 'class="active"'; }?>><a href="<?php echo $base; ?>">Home</a></li>
+          <li <?php if($VIEWER_page == 'editor' ){ echo 'class="active"'; }?>><a href="<?php echo $base; ?>editor/">Editor</a></li>
         </ul>
       </div>
       <!-- /.nav-collapse -->

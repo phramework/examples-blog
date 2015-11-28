@@ -1,7 +1,9 @@
 {
-  "name": "phramework/examples/blog",
-  "description": "PHP Framework for RESTful services",
-  "homepage": "https://nohponex.gr",
+  "name": "phramework/examples-blog",
+  "description": "Simple blog example using phramework",
+  "license": "Apache-2.0",
+  "homepage": "https://phramework.github.io/",
+  "type": "project",
   "authors": [{
     "name": "Xenofon Spafaridis",
     "email": "nohponex@gmail.com",
@@ -9,16 +11,30 @@
   }],
   "autoload": {
     "psr-4": {
-      "Phramework\\Examples\\blog\\APP\\": "APP/"
+      "Phramework\\Examples\\Blog\\": "src/"
     }
   },
   "require": {
     "php": ">=5.6",
-    "phramework/phramework": "dev-master"
+    "phramework/phramework": "^1.0.0"
+  },
+  "require-dev": {
+    "phramework/testphase": "dev-master"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "archive": {
     "exclude": ["demo/", "examples/", "test/", "/*.test", "tests", "demo.php"]
+  },
+  "scripts": {
+    "test": [
+      "find src/ -name '*.php' -print0 | xargs -0 -L 1 php -l",
+      "find public/ -name '*.php' -print0 | xargs -0 -L 1 php -l"
+    ],
+    "test-api": [
+      "testphase -i -d ./tests-api/ -b ./tests-api/bootstrap.php"
+    ],
+    "lint": "phpcs -p -s --standard=PSR2 ./src",
+    "run": "(cd public; echo \"\nStarting web server at http://localhost:8085 ...\n\"; php -S localhost:8085)"
   }
 }
