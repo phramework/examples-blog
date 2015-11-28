@@ -1,4 +1,4 @@
-# Simple jsonapi example using phramework
+# Simple blog example using phramework
 ## Install
 
 ```bash
